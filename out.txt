@@ -1,0 +1,8 @@
+board;cai bang
+phone;dien thoai
+pencil;but chi
+computer;may tinh de ban
+calculator;may tinh
+book;quyen sach
+lamp;cai den
+speaker;cai loa
