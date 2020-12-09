@@ -130,6 +130,8 @@ int main()
 				break;
 			}
 
+			cout << "Tu: " << wn->getWord() << endl;
+			cout << "Nghia cu: " << wn->getMeaning() << endl;
 			cout << "Nhap nghia moi (enter de bo qua): ";
 			getline(cin, meaning);
 
