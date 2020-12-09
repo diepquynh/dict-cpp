@@ -75,14 +75,14 @@ int main()
 	int choice;
 
 	do {
-		string word, mod_word, meaning;
+		string word, meaning;
 		WordNode *wn;
 
 		cout << "Tu dien C++" << endl;
 		cout << "*. Thoat khoi chuong trinh" << endl;
 		cout << "1. Nhap du lieu tu dien tu file" << endl;
 		cout << "2. Tim kiem 1 tu" << endl;
-		cout << "3. Thay doi 1 tu" << endl;
+		cout << "3. Thay doi nghia 1 tu" << endl;
 		cout << "4. Xoa 1 tu trong tu dien" << endl;
 		cout << "5. Xuat cac tu da co trong tu dien ra man hinh" << endl;
 		cout << "6. Xuat cac tu da co trong tu dien ra file" << endl;
@@ -130,18 +130,14 @@ int main()
 				break;
 			}
 
-			cout << "Nhap tu moi thay the (enter de bo qua): ";
-			getline(cin, mod_word);
-			cout << "Nhap nghia moi: ";
+			cout << "Nhap nghia moi (enter de bo qua): ";
 			getline(cin, meaning);
 
-			if (mod_word.length() == 0)
-				dt.modify(word, word, meaning);
-			else
-				dt.modify(word, mod_word, meaning);
-
-			cout << "Thay doi thanh cong! ";
-			waitForEnter();
+			if (meaning.length() != 0) {
+				dt.modify(word, meaning);
+				cout << "Thay doi thanh cong! ";
+				waitForEnter();
+			}
 			break;
 		case 4:
 			cout << "Nhap tu can xoa: ";

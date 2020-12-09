@@ -37,7 +37,7 @@ public:
 	void insert(std::string word, std::string meaning);
 	void remove(std::string word);
 	WordNode *search(std::string word);
-	void modify(std::string word, std::string new_word, std::string new_meaning);
+	void modify(std::string word, std::string new_meaning);
 	void print();
 };
 
@@ -150,11 +150,9 @@ void DictionaryTree::remove(std::string word)
 }
 
 // Phuong thuc sua
-void DictionaryTree::modify(std::string word, std::string new_word, std::string new_meaning)
+void DictionaryTree::modify(std::string word, std::string new_meaning)
 {
 	WordNode *wn = this->search(word);
-
-	wn->setWord(new_word);
 	wn->setMeaning(new_meaning);
 }
 
